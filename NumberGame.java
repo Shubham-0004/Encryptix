@@ -14,7 +14,7 @@ public class NumberGame {
             int maxAttempts=10;
             boolean hasGuessedCorrectly=false;
 
-            System.out.println("A random number has been genarated.Can you guess it ?");
+            System.out.println("A random number between 1 and 100 has been genarated.Can you guess it ?");
             System.out.println("You will have "+maxAttempts+ " attempts to guess this number." );
 
             while (numberOfAttempts<=maxAttempts && !hasGuessedCorrectly) {
@@ -25,9 +25,8 @@ public class NumberGame {
                 if (userGuess==numberToGuess) {
                     System.out.println("Congratulations ! You have guessed the correct one.");
                     hasGuessedCorrectly=true;
-                    totalScore=10-numberOfAttempts+1;
+                    totalScore=(10-numberOfAttempts+1)*10;
                     System.out.println("Your Total Score is: "+totalScore);
-                    //System.out.println("Thank You for playing ! Enjoy your day.");
                 }
                 else if (userGuess<numberToGuess) {
                     System.out.println("Your guess is too low.Try again!");
